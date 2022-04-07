@@ -26,6 +26,16 @@ In this case, all exported functions become public contract methods.
 // return the string 'hello world'
 export function helloWorld(): string {}
 
+// return the string 'hello world'
+export function helloWorldTask1(): string {}
+  
+// return the string 'hello, ' + name
+export function helloWorldTask2(name: string): string {}
+  
+// return the string 'hello, ' + each name in names
+export function helloWorldTask3(names: Array<string>): string {}
+
+
 // read the given key from account (contract) storage
 export function read(key: string): string {}
 
@@ -47,14 +57,8 @@ In this case, all methods on the class become public contract methods unless mar
 export class Contract {
 
   // return the string 'hello world'
-  helloWorldTask1(): string {}
+  helloWorld(): string {}
   
-  // return the string 'hello, ' + name
-  helloWorldTask2(name: string): string {}
-  
-  // return the string 'hello, ' + each name in names
-  helloWorldTask3(names: Array<string>): string {}
-
   // read the given key from account (contract) storage
   read(key: string): string {}
 
