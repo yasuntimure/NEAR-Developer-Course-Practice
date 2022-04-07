@@ -1,8 +1,18 @@
 import { storage, Context } from "near-sdk-as"
 
 // return the string 'hello world'
-export function helloWorld(name: string): string {
+export function helloWorldTask1(): string {
+  return 'hello world'
+}
+
+// return the string 'hello, ' + name
+export function helloWorldTask2(name: string): string {
   return 'hello, ' + name
+}
+
+// return the string 'hello, ' + each name in names
+export function helloWorldTask3(names: Array<string>): string {
+  return names.map<string>(name => 'hello ' + name).join(' ')
 }
 
 // read the given key from account (contract) storage
