@@ -47,7 +47,13 @@ In this case, all methods on the class become public contract methods unless mar
 export class Contract {
 
   // return the string 'hello world'
-  helloWorld(): string {}
+  helloWorldTask1(): string {}
+  
+  // return the string 'hello, ' + name
+  helloWorldTask2(name: string): string {}
+  
+  // return the string 'hello, ' + each name in names
+  helloWorldTask3(names: Array<string>): string {}
 
   // read the given key from account (contract) storage
   read(key: string): string {}
