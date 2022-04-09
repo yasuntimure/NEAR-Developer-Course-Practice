@@ -1,5 +1,6 @@
 import { storage, Context } from "near-sdk-as"
 
+// ----- PRACTICE I FUNCTIONS -------
 // return the string 'hello world'
 export function helloWorldTask1(): string {
   return 'hello world'
@@ -14,6 +15,14 @@ export function helloWorldTask2(name: string): string {
 export function helloWorldTask3(names: Array<string>): string {
   return names.map<string>(name => 'hello ' + name).join(' ')
 }
+// ------------------------------------
+
+// ----- PRACTICE II FUNCTIONS ----------
+export function helloWorld(): string {
+  const predecessor = Context.predecessor
+  return 'hello ' + predecessor
+}
+// ------------------------------------
 
 // read the given key from account (contract) storage
 export function read(key: string): string {
